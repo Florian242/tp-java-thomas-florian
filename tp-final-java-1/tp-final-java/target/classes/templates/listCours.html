@@ -5,7 +5,7 @@
     <title>Liste des cours</title>
 </head>
 <body>
-<a href="addCour">Ajouter un Cour</a>
+<a href="addCours">Ajouter un Cours</a>
 </h1>
 <br/><br/>
 <div>
@@ -22,12 +22,12 @@
 
 
         </tr>
-        <tr th:each ="cour : ${cours}">
-            <td th:utext="${cour.id}"></td>
-            <td th:utext="${cour.nom}"></td>
-            <td th:utext="${cour.heureDebut}"></td>
-            <td th:utext="${cour.heureFin}"></td>
-            <td><a th:href="@{/deleteCour(courId=${cour.id})}">Supprimer</a></td>
+        <tr th:each ="cours : ${cours}">
+            <td th:utext="${cours.id}"></td>
+            <td th:utext="${cours.nom}"></td>
+            <td th:utext="${cours.heureDebut}"></td>
+            <td th:utext="${cours.heureFin}"></td>
+            <td><a th:href="@{/deleteCour(courId=${cours.id})}">Supprimer</a></td>
         </tr>
     </table>
 

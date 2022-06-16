@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+  <form action="#" th:action="@{/listNiveau/}" th:object="${niveau}" method="post" id="formCour">
+
+    <p>Entrer le libelle du niveau : <input type="text" id="libelle", th:field="*{libelle}"></p>
+    <p>Entrer le code du niveau: <input type="text" id="code", th:field="*{code}"></p>
+    <button type="submit"value="Submit">Ajouter</button>
+  </form>
+
+  <br>
+  <a href="/">Revenir à l'acceuil</a>
+
+
+</div>
+
+</body>
+</html>

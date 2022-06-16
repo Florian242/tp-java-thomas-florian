@@ -16,9 +16,9 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@EnableTransactionManagement // active le management des transaction
+@EnableTransactionManagement // active le management des transactions
 @ComponentScan(basePackages = { "com.example.service" })
-@EnableJpaRepositories(basePackages = { "com.example.repository" }) // active les repositories
+@EnableJpaRepositories(basePackages = { "com.example.service" }) // actives les repositories
 public class Initializer {
 
     /**
