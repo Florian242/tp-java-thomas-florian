@@ -1,10 +1,6 @@
 package com.example.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "table_eleves")
@@ -12,18 +8,24 @@ public class Eleve {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column
     public String nom;
+    @Column
     public String prenom;
+    @Column
     public int age;
+    @Column
     public String adresse;
 
 
-    public Eleve(int id, String nom, String prenom, int age, String adresse) {
+
+    public Eleve(int id, String nom, String prenom, int age, String adresse ) {
         this.id=id;
         this.nom = nom;
         this.prenom = prenom;
         this.age = age;
         this.adresse = adresse;
+
     }
 
     public Eleve() {

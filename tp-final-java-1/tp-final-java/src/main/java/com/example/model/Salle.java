@@ -8,8 +8,11 @@ public class Salle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
+    @Column
     public int capacity;
+    @Column
     public String nom;
+    @Column
     public String code;
 
     public Salle(long id, int capacity, String nom, String code) {

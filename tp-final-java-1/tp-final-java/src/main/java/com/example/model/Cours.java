@@ -4,23 +4,26 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="table_cours")
-public class Cour {
+public class Cours {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column
     public String nom;
+    @Column
     public String heureDebut;
+    @Column
     public String heureFin;
 
 
-    public Cour(long id, String nom, String heureDebut, String heureFin, String niveauScolaire) {
+    public Cours(long id, String nom, String heureDebut, String heureFin, String niveauScolaire) {
         this.id = id;
         this.nom = nom;
         this.heureDebut = heureDebut;
         this.heureFin = heureFin;
     }
 
-    public Cour() {
+    public Cours() {
 
     }
 
