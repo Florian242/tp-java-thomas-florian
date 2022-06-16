@@ -1,8 +1,6 @@
 package com.example.service;
 
-import com.example.demo.Eleve;
-import com.example.demo.Salle;
-import com.example.repository.EleveRepository;
+import com.example.model.Salle;
 import com.example.repository.SalleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

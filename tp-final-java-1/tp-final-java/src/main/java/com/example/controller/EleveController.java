@@ -1,6 +1,6 @@
 package com.example.controller;
 
-import com.example.demo.Eleve;
+import com.example.model.Eleve;
 
 import com.example.service.EleveService;
 

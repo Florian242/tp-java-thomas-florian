@@ -1,7 +1,6 @@
 package com.example.repository;
 
-import com.example.demo.Cour;
-import com.example.demo.Eleve;
+import com.example.model.Cour;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

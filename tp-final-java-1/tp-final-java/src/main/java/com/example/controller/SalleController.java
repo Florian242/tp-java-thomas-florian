@@ -1,7 +1,6 @@
 package com.example.controller;
 
-import com.example.demo.Eleve;
-import com.example.demo.Salle;
+import com.example.model.Salle;
 import com.example.service.SalleService;
 
 import org.springframework.beans.factory.annotation.Autowired;

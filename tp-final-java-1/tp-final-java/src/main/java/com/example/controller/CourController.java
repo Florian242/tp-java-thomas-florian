@@ -1,6 +1,6 @@
 package com.example.controller;
 
-import com.example.demo.Cour;
+import com.example.model.Cour;
 import com.example.service.CourService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

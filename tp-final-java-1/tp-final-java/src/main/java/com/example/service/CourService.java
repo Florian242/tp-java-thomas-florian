@@ -1,7 +1,6 @@
 package com.example.service;
 
-import com.example.demo.Cour;
-import com.example.demo.Salle;
+import com.example.model.Cour;
 import com.example.repository.CourRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

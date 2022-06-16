@@ -1,12 +1,11 @@
 package com.example.service;
 
-import com.example.demo.Eleve;
+import com.example.model.Eleve;
 import com.example.repository.EleveRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.List;
 import java.util.Optional;
 
 @Service
