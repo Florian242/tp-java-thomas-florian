@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire d'ajout d'un élève</title>
+</head>
+<body>
+<h1>Formulaire d'inscription des élèves</h1>
+<div>
+    <form action="#" th:action="@{/listEleves/}" th:object="${eleve}" method="post" id="formEleve">
+
+        <p>Entrer le nom de l'élève : <input type="text" id="nom", th:field="*{nom}"></p>
+        <p>Entrer le prénom de l'élève : <input type="text" id="prenom", th:field="*{prenom}"></p>
+        <p>Entrer l'age de l'élève : <input type="number"  id="age"
+                                            min="18" max="80", th:field="*{age}"></p>
+        <p>Entrer l'adresse de l'élève : <input type="text" id="adresse", th:field="*{adresse}"></p>
+        <button type="submit"value="Submit">Ajouter</button>
+    </form>
+
+
+</div>
+</body>
+</html>

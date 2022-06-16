@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Liste des cours</title>
+</head>
+<body>
+<a href="addCour">Ajouter un Cour</a>
+</h1>
+<br/><br/>
+<div>
+    <table>
+        <tr th:if="${cours==null}" th:utext="Aucun cours enregistrés">
+        </tr>
+        <tr>
+            <th th:if="${cours!=null}" th:utext="Id"></th>
+            <th th:if="${cours!=null}" th:utext="Nom"></th>
+            <th th:if="${cours!=null}" th:utext="Heure-debut"></th>
+            <th th:if="${cours!=null}" th:utext="Heure-fin"></th>
+            <th>Supprimer</th>
+            <th>Modifier</th>
+
+
+        </tr>
+        <tr th:each ="cour : ${cours}">
+            <td th:utext="${cour.id}"></td>
+            <td th:utext="${cour.nom}"></td>
+            <td th:utext="${cour.heureDebut}"></td>
+            <td th:utext="${cour.heureFin}"></td>
+            <td><a th:href="@{/deleteCour(courId=${cour.id})}">Supprimer</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

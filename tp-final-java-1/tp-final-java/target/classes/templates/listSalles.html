@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Liste des Salles</title>
+</head>
+<body>
+<a href="addSalle">Ajouter une salle</a>
+</h1>
+<br/><br/>
+<div>
+    <table>
+        <tr th:if="${salles==null}" th:utext="Aucune salles enregistrées">
+        </tr>
+        <tr>
+            <th th:if="${salles!=null}" th:utext="Id"></th>
+            <th th:if="${salles!=null}" th:utext="Capacité"></th>
+            <th th:if="${salles!=null}" th:utext="Nom"></th>
+            <th th:if="${salles!=null}" th:utext="Code"></th>
+            <th>Supprimer</th>
+            <th>Modifier</th>
+
+
+        </tr>
+        <tr th:each ="salle : ${salles}">
+            <td th:utext="${salle.id}"></td>
+            <td th:utext="${salle.capacity}"></td>
+            <td th:utext="${salle.nom}"></td>
+            <td th:utext="${salle.code}"></td>
+            <td><a th:href="@{/deleteSalle(salleId=${salle.id})}">Supprimer</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

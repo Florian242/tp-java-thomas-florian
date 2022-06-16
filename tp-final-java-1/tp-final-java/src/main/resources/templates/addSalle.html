@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire d'ajout d'une salle</title>
+</head>
+<body>
+<h1>Formulaire de creation d'une salle</h1>
+<div>
+    <form action="#" th:action="@{/listSalles/}" th:object="${salle}" method="post" id="formSalle">
+
+        <p>Entrer la capacitée de la salle : <input type="text" id="capacity", th:field="*{capacity}"></p>
+        <p>Entrer le nom de la salle : <input type="text" id="nom", th:field="*{nom}"></p>
+        <p>Entrer le code de la salle: <input type="text" id="code", th:field="*{code}"></p>
+        <button type="submit"value="Submit">Ajouter</button>
+    </form>
+
+
+</div>
+</body>
+</html>

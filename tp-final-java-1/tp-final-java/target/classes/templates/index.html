@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Page d'acceuil JavaUNC2022</title>
+</head>
+<body>
+<H1>Classe L4 informatique TREC 7</H1>
+<h2>
+    <span>Bonjour, <th:block th:text="${name}">[name]</th:block></span>
+</h2>
+<div>
+    <a href="/addEleve">Ajouter un élève</a>
+    <a href="/listEleves">Voir la liste d'élèves</a>
+    <a href="/listSalles">Voir la liste des salles</a>
+    <a href="/addSalle">Ajouter une salle</a>
+    <a href="/listCours">Voir la liste des cours</a>
+    <a href="/addCour">Ajouter un cour</a>
+
+</div>
+</body>
+</html>
