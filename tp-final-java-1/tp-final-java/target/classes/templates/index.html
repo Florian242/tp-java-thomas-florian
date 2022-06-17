@@ -2,24 +2,58 @@
 <html xmlns:th="http://thymeleaf.org" >
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" media="all" href="../static/css/index.css" th:href="@{/css/index.css}">
     <title>Page d'acceuil JavaUNC2022</title>
-    <link rel="stylesheet" th:href="@{/css/acceuil.css}">
+
 </head>
 <body>
-<H1>Bienvenue à la page d'accueil du planning</H1>
-<h2>
-    Liste des actions possible :
-</h2>
-<ul>
-    <li><a href="/addEleve">Ajouter un élève</a></li><br>
-    <li><a href="/listEleves">Voir la liste d'élèves</a></li><br>
-    <li><a href="/addSalle">Ajouter une salle</a></li><br>
-    <li><a href="/listSalles">Voir la liste des salles</a></li><br>
-    <li><a href="/addCours">Ajouter un cours</a></li><br>
-    <li><a href="/listCours">Voir la liste des cours</a></li><br>
-    <li><a href="/addNiveau">Ajouter un niveau</a></li><br>
-    <li><a href="/listNiveau">Voir la liste des niveaux</a></li><br>
+<H1 class="header">Bienvenue à la page d'accueil du planning</H1>
 
-</ul>
+<div class="menu">
+    <h2>
+        Liste des actions possible :
+    </h2>
+    <ul>
+        <li><a href="/addEleve">Ajouter un élève</a></li><br>
+        <li><a href="/listEleves">Voir la liste d'élèves</a></li><br>
+        <li><a href="/addSalle">Ajouter une salle</a></li><br>
+        <li><a href="/listSalles">Voir la liste des salles</a></li><br>
+        <li><a href="/addCours">Ajouter un cours</a></li><br>
+        <li><a href="/listCours">Voir la liste des cours</a></li><br>
+        <li><a href="/addNiveau">Ajouter un niveau</a></li><br>
+        <li><a href="/listNiveau">Voir la liste des niveaux</a></li><br>
+    </ul>
+</div>
+<div class="img_spring"><img src="images/springThymeleaf.png"></div>
+<div class="footer-dark">
+<footer >
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-3 item">
+                <div class="prof">
+                <h3>Professeur</h3>
+                <ul>
+                    <li>Mr FABRE</li>
+                </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 item">
+                <div class="etudiant">
+                <h3>Etudiants</h3>
+                <ul>
+                    <li>Florian</li>
+                    <li>Thomas</li>
+                </ul>
+                </div>
+                <div class="unc">
+                <h3>Etablissement</h3>
+                <ul>
+                    <li>UNC</li>
+                </ul>
+                </div>
+            </div>
+    <div class="img"><img src="images/logoUNC.png" width="100"></div>
+</footer>
+</div>
 </body>
 </html>
