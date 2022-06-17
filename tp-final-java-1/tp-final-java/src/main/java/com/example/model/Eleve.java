@@ -17,14 +17,16 @@ public class Eleve {
     @Column
     public String adresse;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Niveau niveau;
 
-
-    public Eleve(int id, String nom, String prenom, int age, String adresse ) {
+    public Eleve(int id, String nom, String prenom, int age, String adresse , Niveau niveau) {
         this.id=id;
         this.nom = nom;
         this.prenom = prenom;
         this.age = age;
         this.adresse = adresse;
+        this.niveau = niveau;
 
     }
 
