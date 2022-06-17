@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="addNiveau">Ajouter un Niveau</a><br>
+<table>
+    <tr th:if="${niveau==null}" th:utext="Aucun niveau enregistrées">
+    </tr>
+    <tr>
+        <th th:if="${niveau!=null}" th:utext="Id"></th>
+        <th th:if="${niveau!=null}" th:utext="Libelle"></th>
+        <th th:if="${niveau!=null}" th:utext="Code"></th>
+        <th>Supprimer</th>
+        <th>Modifier</th>
+
+
+    </tr>
+    <tr th:each ="niveau : ${niveau}">
+        <td th:utext="${niveau.id}"></td>
+        <td th:utext="${niveau.libelle}"></td>
+        <td th:utext="${niveau.code}"></td>
+        <td><a th:href="@{/deleteNiveau(niveauId=${niveau.id})}">Supprimer</a></td>
+        <td><a th:href="@{/modificationNiveau/{id}/modifier(id=${niveau.getId})}">Modifier</a></td>
+    </tr>
+</table>
+
+</body>
+</html>

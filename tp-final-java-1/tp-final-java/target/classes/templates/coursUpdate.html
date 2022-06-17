@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire de modification d'un cour</title>
+</head>
+<body>
+<h1>Formulaire de modification d'un cour</h1>
+<div>
+    <form action="#" th:action="@{/listCours/{id}/update(id=${cour.getId})}" th:object="${cour}" method="post" id="formEleve">
+
+        <p>Entrer le nom du cours: <input type="text" id="nom", th:field="*{nom}"></p>
+        <p>Entrer l'heure du début : <input type="text" id="prenom", th:field="*{heureDebut}"></p>
+        <p>Entrer l'heure de fin : <input type="text" id="adresse", th:field="*{heureFin}"></p>
+        <button type="submit"value="Submit">Modifier</button>
+    </form>
+    <br>
+    <a href="/">Revenir à l'acceuil</a>
+
+</div>
+</body>
+</html>
