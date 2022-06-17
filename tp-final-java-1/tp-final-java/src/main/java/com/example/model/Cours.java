@@ -15,6 +15,14 @@ public class Cours {
     @Column
     public String heureFin;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Niveau niveau;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Salle salle;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Eleve eleve;
 
     public Cours(long id, String nom, String heureDebut, String heureFin, String niveauScolaire) {
         this.id = id;
