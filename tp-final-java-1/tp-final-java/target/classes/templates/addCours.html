@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire d'ajout d'un cours</title>
+</head>
+<body>
+<h1>Formulaire d'inscription d'un cours</h1>
+<div>
+  <form action="#" th:action="@{/listCours/}" th:object="${cours}" method="post" id="formCour">
+
+    <p>Entrer le nom du cours : <input type="text" id="nom", th:field="*{nom}"></p>
+    <p>Entrer l'heure ou le cours commence : <input type="text" id="heureDebut", th:field="*{heureDebut}"></p>
+    <p>Entrer l'heure ou le cours ce termine : <input type="text" id="heureFin", th:field="*{heureFin}"></p>
+    <button type="submit"value="Submit">Ajouter</button>
+  </form>
+
+  <br>
+  <a href="/">Revenir à l'acceuil</a>
+
+
+</div>
+</body>
+</html>
