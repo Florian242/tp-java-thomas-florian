@@ -28,6 +28,7 @@
             <td th:utext="${cours.heureDebut}"></td>
             <td th:utext="${cours.heureFin}"></td>
             <td><a th:href="@{/deleteCour(courId=${cours.id})}">Supprimer</a></td>
+            <td><a th:href="@{/modificationCours/{id}/modifier(id=${cours.getId})}">Modifier</a></td>
         </tr>
     </table>
 
