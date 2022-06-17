@@ -30,7 +30,7 @@
             <td th:utext="${eleve.age}"></td>
             <td th:utext="${eleve.adresse}"></td>
             <td><a th:href="@{/deleteEleve(eleveId=${eleve.id})}">Supprimer</a></td>
-            <td><a th:href="@{/modificationEleve/{id}(id=${eleve.id})}">Modifier</a></td>
+            <td><a th:href="@{/modificationEleve/{id}/modifier(id=${eleve.getId})}">Modifier</a></td>
         </tr>
     </table>
 

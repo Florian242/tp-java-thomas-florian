@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Page d'acceuil JavaUNC2022</title>
-    <link rel="stylesheet" type="text/css" href="/css/acceuil.css">
+    <link rel="stylesheet" th:href="@{/css/acceuil.css}">
 </head>
 <body>
-<H1 class="header" >Bienvenue à la page d'accueil du planning</H1>
-<div class="img_spring">
-    <img src="../static/images/springThymeleaf.png" width="250" th:src="@{images/springThymeleaf.png}"/>
-</div>
-<div class="menu">
+<H1>Bienvenue à la page d'accueil du planning</H1>
 <h2>
     Liste des actions possible :
 </h2>
@@ -25,24 +21,5 @@
     <li><a href="/listNiveau">Voir la liste des niveaux</a></li><br>
 
 </ul>
-</div>
-<div class="footer-dark" >
-    <img class="img" src="../static/images/logoUNC.png" th:src="@{images/logoUNC.png}"/>
-<footer>
-    <div class="prof">
-    <h3>Proffesseur</h3>
-    <p>Mr FABRE</p>
-    </div>
-    <div class="etudiant">
-    <h3>Etudiant</h3>
-    <p>Florian</p>
-    <p>Thomas</p>
-    </div>
-    <div class="unc">
-    <h3>Etablissement</h3>
-    <p>UNC</p>
-    </div>
-</footer>
-</div>
 </body>
 </html>

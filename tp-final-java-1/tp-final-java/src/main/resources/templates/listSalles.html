@@ -28,6 +28,7 @@
             <td th:utext="${salle.nom}"></td>
             <td th:utext="${salle.code}"></td>
             <td><a th:href="@{/deleteSalle(salleId=${salle.id})}">Supprimer</a></td>
+            <td><a th:href="@{/modificationSalle/{id}/modifier(id=${salle.getId})}">Modifier</a></td>
         </tr>
     </table>
 

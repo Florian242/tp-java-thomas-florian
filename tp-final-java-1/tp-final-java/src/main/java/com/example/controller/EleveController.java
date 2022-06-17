@@ -9,7 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 
 @Controller
@@ -52,14 +55,20 @@ public class EleveController {
         return "redirect:/listEleves";
     }
 
-    @GetMapping("/modificationEleve/{id}")
-    public String modificationEleve(@PathVariable Long id, BindingResult result, Model model) {
+    @GetMapping("/modificationEleve/{id}/modifier")
+    public String modificationEleve(@PathVariable("id") Long id, Model model) {
 
-        Eleve modifie = eleveService.getEleveById(id).get();
-
-        model.addAttribute("modifies", modifie);
-
+        Optional<Eleve> modifie = eleveService.getEleveById(id);
+        model.addAttribute("eleve", modifie.get());
         return "eleveUpdate";
+    }
+
+    @PostMapping("/listEleves/{id}/update")
+    public String modificationELeve(@PathVariable("id") Long id, @Validated Eleve eleve, BindingResult result,Model model){
+        eleve.setId(id);
+        eleveService.saveEleve(eleve);
+        model.addAttribute("eleves", eleveService.getAll());
+        return "listEleves";
     }
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -23,6 +23,7 @@
         <td th:utext="${niveau.libelle}"></td>
         <td th:utext="${niveau.code}"></td>
         <td><a th:href="@{/deleteNiveau(niveauId=${niveau.id})}">Supprimer</a></td>
+        <td><a th:href="@{/modificationNiveau/{id}/modifier(id=${niveau.getId})}">Modifier</a></td>
     </tr>
 </table>
 

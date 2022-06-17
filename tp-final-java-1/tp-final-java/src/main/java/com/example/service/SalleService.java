@@ -1,10 +1,12 @@
 package com.example.service;
 
+import com.example.model.Cours;
 import com.example.model.Salle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -22,6 +24,11 @@ public class SalleService {
 
     public void delSalle(long idSalle) {
         this.salleRepository.deleteById(idSalle);
+    }
+
+    public Optional<Salle> getSalleById(Long id) {
+        Optional<Salle> salles = this.salleRepository.findById(id);
+        return salles;
     }
 
 }

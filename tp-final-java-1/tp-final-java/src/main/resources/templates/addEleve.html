@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulaire d'ajout d'un élève</title>
+    <link rel="stylesheet" th:href="@{static/css/formulaire.css}">
 </head>
 <body>
 <h1>Formulaire d'inscription des élèves</h1>
-<div>
+
+<div class="container">
     <form action="#" th:action="@{/listEleves/}" th:object="${eleve}" method="post" id="formEleve">
 
         <p>Entrer le nom de l'élève : <input type="text" id="nom", th:field="*{nom}"></p>
